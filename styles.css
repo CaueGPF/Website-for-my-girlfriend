@@ -1,0 +1,305 @@
+:root {
+    --roxo-secundario: #F0A8D0;
+    --rosa-secundario: #F7B5CA;
+    --amarelo-secundario: #FFEBD4;
+    --bege-secundario: #FFC6C6;
+    --fonte-titulo: "DM Serif Display", serif;
+    --font-texto: "Courier Prime", monospace;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: rgb(247,181,202);
+    background: radial-gradient(circle, rgba(247,181,202,1) 40%, rgba(255,198,198,1) 75%);
+}
+
+.navegacao {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    margin: 2rem 5rem 1rem 5rem;
+}
+
+.img__link {
+    width: 40%;
+    border: 2px solid var(--amarelo-secundario);
+    box-shadow: 0.5px 0.5px 1.5px 1.5px grey    ;
+    padding: 0.2rem;
+    transition: 0.5s ease-in-out;
+}
+
+.img__link:hover {
+    scale: 1.2;
+}
+
+.nav__lista {
+    display: flex;
+}
+
+.nav__item {
+    margin-right: 4rem;
+    list-style-type: none;
+}
+
+.nav__item a {
+    text-decoration: none;
+    color: var(--amarelo-secundario);
+    text-shadow: 0.1rem 0.1rem grey;
+    font-size: 20px;
+}
+
+.nav__botao {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge var(--amarelo-secundario);
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 8px;        
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav__botao::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    transition: 0.5s;
+    transform-origin: center;
+}
+  
+.nav__botao::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    transition: 0.5s;
+}
+  
+.nav__botao:hover::before, .nav__botao:hover::after {
+    transform: scale(0)
+}
+  
+.nav__botao:hover {
+    box-shadow: inset 0px 0px 25px var(--amarelo-secundario);
+    scale: 1.1;
+}
+      
+
+.first__section {
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem 5rem 5rem 4rem;
+    gap: 5rem;
+}
+
+.about {
+    background-color: var(--amarelo-secundario);
+    border-radius: 12px;
+    box-shadow:  9px 9px 5px #f0baba,
+             -9px -9px 5px #ffd2d2;
+    padding: 2rem;
+    display: flex;
+    align-items: start;
+}
+
+.about__conteudo {
+    margin-top: 0rem;
+}
+
+.about__titulo {
+    margin-bottom: 0.5rem;
+    color: var(--roxo-secundario);
+    font-family: var(--fonte-titulo);
+    font-size: 42px;
+    text-shadow: 0.1rem 0.1rem var(--bege-secundario);
+}
+
+.about__texto {
+    font-family: var(--font-texto);
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.about__imagem {
+    border: 10px double var(--amarelo-secundario);
+    border-radius: 12px;
+    padding: 0.5rem;
+}
+
+.imagem-about {
+    width: 400px;
+    height: 500px;
+}
+
+.habilidade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    margin: 2rem;
+}
+
+.habilidade__introducao{
+    text-align: center;
+    margin-bottom: -3rem;
+}
+
+.habilidade__titulo {
+    font-family: var(--fonte-titulo);
+    padding: 1rem;
+    border: 5px solid var(--amarelo-secundario);
+    display: inline-block;
+    color: var(--amarelo-secundario);
+    text-shadow: 0.1rem 0.1rem grey;
+    box-shadow:  9px 9px 5px #f0baba;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 2rem;
+}
+
+
+.titulo__imagem {
+    color: var(--roxo-secundario);
+    font-family: var(--fonte-titulo);
+    font-size: 42px;
+    text-shadow: 0.1rem 0.1rem var(--bege-secundario);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    background-color: var(--amarelo-secundario);
+    border-radius: 12px;    
+    width: 90%;
+}
+
+.titulo-caca {
+    width: 84%;
+}
+
+.container__habilidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.habilidade__imagem {
+    width: 400px;
+    height: 520px;
+    border: 5px double var(--amarelo-secundario);
+    border-radius: 12px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}   
+
+.habilidade__lista {
+    font-family: var(--font-texto);
+    background-color: var(--amarelo-secundario);
+    text-shadow: 0.1rem 0.1rem var(--bege-secundario);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: inset 9px 9px 20px #f2dfc9,
+            inset -9px -9px 20px #fff7df;
+    width: 76%;
+}
+
+.caca-lista {
+    width: 71%;
+}
+
+.habilidade__item {
+margin: 0.1rem 0 0.3rem 0;
+}
+
+.habilidade__item::marker {
+    color: var(--roxo-secundario);
+}
+
+.container__slides {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 4rem 0 40em 0;
+    flex-direction: row;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    width: 25em;
+    height: 22em;
+    margin: 30px 10px; 
+    padding: 20px 15px;
+    border-radius: 50px;
+    flex-direction: column;
+    background-color: var(--rosa-secundario);
+    box-shadow: 0 1em 10em var(--amarelo-secundario);
+    transition: 0.3s ease-in-out;
+    position: relative;
+    border: 5px solid var(--amarelo-secundario);
+}
+
+.card__foto {
+    position: relative;
+    width: 22rem;
+    height: 28em; 
+    border-radius: 50px;
+    top: -45px;
+    left: 10px;
+    z-index: 1;
+}
+
+.card__conteudo {
+    position: relative;
+    text-align: center;
+    margin-top: -5rem;
+    padding: 1em 2em;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease;
+    color: black;
+}
+
+.card:hover {
+    height: 35rem;
+}
+
+.card:hover .card__conteudo {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.card__titulo {
+    color: var(--amarelo-secundario);
+    font-family: var(--fonte-titulo);
+    font-size: 32px;
+    text-shadow: 0.1rem 0.1rem black;
+    margin-bottom: 0.3em;
+    margin-top: -0.6em;
+}
+
+.card__texto {
+    font-family: var(--font-texto);
+    color: var(--amarelo-secundario);
+    text-shadow: 0.1rem 0.1rem black;
+}
